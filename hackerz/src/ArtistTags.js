@@ -1,12 +1,14 @@
 import {useState} from 'react';
 import {ArtistTag} from './ArtistTag.js';
 
-export function ArtistTags() {
+export default function ArtistTags() {
   const [ind, setInd] = useState(0);
 
   function updateInd() {
     setInd( (ind+1)%10 );
   }
+
+  // flag icons came from https://flagicons.lipis.dev/
 
   const artistsDetails = [
     {'name': 'Christy Moore', 'genres': ['celtic', 'irish folk'], 'pictures links': ['https://i.scdn.co/image/ab6761610000e5ebab90ddc44636e1904139fba2', 'https://i.scdn.co/image/ab67616100005174ab90ddc44636e1904139fba2', 'https://i.scdn.co/image/ab6761610000f178ab90ddc44636e1904139fba2'], 'flag': 'https://flagicons.lipis.dev/flags/4x3/ie.svg'},
@@ -21,9 +23,19 @@ export function ArtistTags() {
     {'name': 'Samo Zaen', 'genres': ['arab pop', 'egyptian pop', 'syrian pop', 'world chill'], 'pictures links': ['https://i.scdn.co/image/ab6761610000e5eb090851db0308ae74a4a50681', 'https://i.scdn.co/image/ab67616100005174090851db0308ae74a4a50681', 'https://i.scdn.co/image/ab6761610000f178090851db0308ae74a4a50681'], 'flag': 'https://flagicons.lipis.dev/flags/4x3/sy.svg'},
     ];
 
+  const v = (x) => (x % artistsDetails.length);
+
   return (
     <div>
-      <ArtistTag name={artistsDetails[ind].name} genre={artistsDetails[ind].genres[0]} image={artistsDetails[ind]['pictures links'][0]} flag={artistsDetails[ind]['flag']}/>
+      <div className="tagsMainContainer">
+        <ArtistTag name={artistsDetails[ind].name} genre={artistsDetails[ind].genres[0]} image={artistsDetails[ind]['pictures links'][0]} flag={artistsDetails[ind]['flag']}/>
+        <ArtistTag name={artistsDetails[v(ind+1)].name} genre={artistsDetails[v(ind+1)].genres[0]} image={artistsDetails[v(ind+1)]['pictures links'][0]} flag={artistsDetails[v(ind+1)]['flag']}/>
+        <ArtistTag name={artistsDetails[v(ind+2)].name} genre={artistsDetails[v(ind+2)].genres[0]} image={artistsDetails[v(ind+2)]['pictures links'][0]} flag={artistsDetails[v(ind+2)]['flag']}/>
+        <ArtistTag name={artistsDetails[v(ind+3)].name} genre={artistsDetails[v(ind+3)].genres[0]} image={artistsDetails[v(ind+3)]['pictures links'][0]} flag={artistsDetails[v(ind+3)]['flag']}/>
+        <ArtistTag name={artistsDetails[v(ind+4)].name} genre={artistsDetails[v(ind+4)].genres[0]} image={artistsDetails[v(ind+4)]['pictures links'][0]} flag={artistsDetails[v(ind+4)]['flag']}/>
+        <ArtistTag name={artistsDetails[v(ind+5)].name} genre={artistsDetails[v(ind+5)].genres[0]} image={artistsDetails[v(ind+5)]['pictures links'][0]} flag={artistsDetails[v(ind+5)]['flag']}/>
+      </div>
+
       <button onClick={updateInd}>
         switch profile
       </button>
