@@ -1,0 +1,29 @@
+.tagContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 550px;
+  border-style: solid;
+  height: 100px;
+  background-color: lightblue; /*rgb(40, 60, 160);*/
+}
+
+.artistImage {
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+}
+
+.flagImage {
+  height: 60px;
+  width: auto;
+}
+
+.tagName {
+  width: 80px;
+}
+
+.tagGenre {
+  width: 80px;
+}
