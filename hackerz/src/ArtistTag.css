@@ -1,3 +1,14 @@
+.tagsMainContainer {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .tagContainer {
   display: flex;
   flex-direction: row;
@@ -5,8 +16,10 @@
   align-items: center;
   max-width: 550px;
   border-style: solid;
+  margin-top: 2rem;
+  width: 35%;
   height: 100px;
-  background-color: lightblue; /*rgb(40, 60, 160);*/
+  background-color: rgb(187, 210, 245);
 }
 
 .artistImage {
