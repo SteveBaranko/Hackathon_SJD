@@ -1,19 +1,32 @@
+import React from "react";
+import {
+	BrowserRouter as Router,
+	Routes,
+	Route
+} from 'react-router-dom';
+
+
+
+
 import './App.css';
-import {Albums} from './Albums.js';
-import {ArtistTags} from './ArtistTags.js';
+import Home from './Home';
+import About from './About';
+import Contact from './Contact'
+import Navbar from './Navbar'
 
 function App() {
 
 
 
 
-
   return (
-    <div className="App">
-      <h1>Hello World!</h1>
-      <Albums></Albums>
-      <ArtistTags/> 
-    </div>
+   
+      <div className="App">
+        <Navbar />
+        <Home />
+       
+      </div>
+
   );
 }
 

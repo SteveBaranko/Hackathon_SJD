@@ -1,0 +1,111 @@
+.App{
+    background-color: rgb(239, 239, 239);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+
+}
+.logo{
+    font-family: Garamond, serif;
+    color: rgb(78, 72, 154);
+    padding-left: 20px;
+}
+
+.navbar{
+    background-color: rgb(187, 210, 245);
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 70px;
+    margin-bottom: 10px;
+
+    box-shadow: 3px 3px 3px 3px rgb(211, 211, 251);
+}
+
+.wheelBox{
+    margin-bottom: 10px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 80%;
+    height: 10%;
+    position: relative;
+
+}
+
+.slideLeft{
+    position: relative;
+    inset: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 0px;
+    margin-top: 30px;
+    height: 100px;
+    
+    
+}
+
+.slideRight{
+    position: relative;
+    inset: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 0px;
+    margin-top: 30px;
+    height: 100px; 
+
+}
+.slideBig{
+    position: relative;
+    inset: 0;
+    
+    height: 200px;
+
+}
+
+
+
+
+.leftArrow{
+    position: relative;
+    cursor: pointer;
+    margin-top: 50px;
+
+}
+
+.rigthArrow{
+    position: relative;
+    cursor: pointer;
+    margin-top: 70px;
+    
+}
+
+.example-enter{
+    opacity: 0.01;
+}
+
+.example-enter.example-enter-active{
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+
+}
+.example-leave{
+    opacity: 1;
+}
+.example-leave.example-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+  }
+
+
+
+
+
