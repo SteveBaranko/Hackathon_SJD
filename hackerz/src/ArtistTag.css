@@ -26,11 +26,15 @@
   border-radius: 50%;
   width: 75px;
   height: 75px;
+
+  box-shadow: 3px 3px 3px 3px rgba(231, 214, 28, 0.475);
 }
 
 .flagImage {
   height: 60px;
   width: auto;
+
+  box-shadow: 3px 3px 3px 3px rgba(5, 39, 133, 0.733);
 }
 
 .tagName {

@@ -78,6 +78,10 @@ def main():
                '4HDJMKkwAMVFewqfZcmf84',
                '2jBsjUNWT1qKhYEZVXlnj0']
 
+  for id in album_ids:
+    print(f"https://open.spotify.com/embed/album/{id}?utm_source=generator")
+  exit(0)
+
   # album_pictures_links = [get_album_picture_links(id) for id in album_ids]
 
   artist_ids = ['3Ebn7mKYzD0L3DaUB1gNJZ',

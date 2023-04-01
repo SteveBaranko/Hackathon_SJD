@@ -25,11 +25,10 @@ function App() {
       <div className="App">
         <Navbar />
         <div className="wheelBoxContainer">
-          <div>music to bring people together</div>
+          <div className="quote">music to bring people together</div>
           <Home/>
         </div>
         <ArtistTags />
-       
       </div>
 
   );
