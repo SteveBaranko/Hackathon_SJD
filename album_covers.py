@@ -54,11 +54,12 @@ def get_artist_details(artist_id):
   genres = json['genres']
   links  = [ img['url'] for img in json['images'] ]
 
+
   return {'name': name, 'genres': genres, 'pictures links': links}
 
 def main():
 
-  ''' 
+  '''
   token = get_access_token()
   print(token)
   token = token.json()
@@ -78,9 +79,11 @@ def main():
                '4HDJMKkwAMVFewqfZcmf84',
                '2jBsjUNWT1qKhYEZVXlnj0']
 
+  '''
   for id in album_ids:
     print(f"https://open.spotify.com/embed/album/{id}?utm_source=generator")
   exit(0)
+  '''
 
   # album_pictures_links = [get_album_picture_links(id) for id in album_ids]
 
@@ -94,11 +97,25 @@ def main():
                 '3Nrfpe0tUJi4K4DXYWgMUX',
                 '0f3EsoviYnRKTkmayI3cux',
                 '4s7xsFTPsZZcIzKv0Ryg22']
+
+  flags = [
+     'https://flagicons.lipis.dev/flags/4x3/ie.svg',
+     'https://flagicons.lipis.dev/flags/4x3/pe.svg',
+     'https://flagicons.lipis.dev/flags/4x3/fr.svg',
+     'https://flagicons.lipis.dev/flags/4x3/in.svg',
+     'https://flagicons.lipis.dev/flags/4x3/rw.svg',
+     'https://flagicons.lipis.dev/flags/4x3/ke.svg',
+     'https://flagicons.lipis.dev/flags/4x3/pl.svg',
+     'https://flagicons.lipis.dev/flags/4x3/kr.svg',
+     'https://flagicons.lipis.dev/flags/4x3/au.svg',
+     'https://flagicons.lipis.dev/flags/4x3/sy.svg']
   
   artist_details = [get_artist_details(id) for id in artist_ids]
 
-  for detail in artist_details:
-    print(detail)
+  for ad, flag in zip(artist_details, flags):
+      ad['flag'] = flag
+
+  print(artist_details)
 
   return
 
