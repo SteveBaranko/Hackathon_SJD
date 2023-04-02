@@ -1,9 +1,9 @@
-
+import logo from './logo.png';
 
 function Navbar(){
     return(
         <nav className="navbar">
-            <h1 className="logo">varisong</h1>
+            <img className="logo" src={logo} alt="varisong logo"></img>
         </nav>
     )
 }
